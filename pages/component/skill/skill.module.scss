@@ -1,0 +1,71 @@
+.wrapper {
+	background-image: url(./background.gif);
+	padding: 80px 20px 95px;
+}
+
+.inner {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.title {
+	margin-bottom: 30px;
+	font-size: 26px;
+}
+
+.column {
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	margin: 0 10px;
+}
+
+.chartWrapper {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	min-width: 50%;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+
+.chart {
+	position: relative;
+	width: 45vw;
+	height: 45vw;
+}
+
+.text {
+	max-width: 800px;
+	margin: 32px auto 0;
+}
+
+.link {
+	text-decoration: underline;
+}
+
+.level {
+	margin-top: 20px;
+	padding: 15px 20px;
+	color: #91355f;
+	background-color: #f4eaef;
+	line-height: 1.6;
+
+	li {
+		padding-left: 2px;
+		font-size: 12px;
+		list-style: inherit;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.column {
+		display: inherit;
+	}
+
+	.chartWrapper {
+		width: 100%;
+		min-width: 100%;
+		padding: 0 0 15px;
+	}
+}
