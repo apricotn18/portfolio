@@ -1,0 +1,42 @@
+.wrapper {
+	background: #a54a73;
+	padding: 90px 10px 20px;
+	color: #fff;
+}
+
+.inner {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.list {
+	display: flex;
+	justify-content: center;
+
+	li {
+		width: 30%;
+		border-right: 1px solid #ccc;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
+
+.link {
+	font-size: 16px;
+}
+
+.copyWrapper {
+	margin-top: 60px;
+}
+
+.copy {
+	font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+	.list li {
+		width: 100%;
+	}
+}
