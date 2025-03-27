@@ -27,7 +27,7 @@ export default function openChart (element) {
 			legend: {
 				display: false
 			},
-			scales:{
+			scale:{
 				ticks:{
 					suggestedMin: 0,
 					suggestedMax: 3,
