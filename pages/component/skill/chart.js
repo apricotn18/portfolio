@@ -35,6 +35,10 @@ export default function openChart (element) {
 					fontSize: 9
 				}
 			},
+			scales:{
+				suggestedMin: 0,
+				suggestedMax: 3
+			},
 			tooltips:{
 				bodyFontColor: '#ccc'
 			},
