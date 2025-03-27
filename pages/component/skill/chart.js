@@ -30,14 +30,10 @@ export default function openChart (element) {
 			scale:{
 				ticks:{
 					suggestedMin: 0,
-					suggestedMax: 3,
+					suggestedMax: 5,
 					stepSize: 1,
 					fontSize: 9
 				}
-			},
-			scales:{
-				suggestedMin: 0,
-				suggestedMax: 3
 			},
 			tooltips:{
 				bodyFontColor: '#ccc'
