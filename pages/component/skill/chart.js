@@ -27,12 +27,14 @@ export default function openChart (element) {
 			legend: {
 				display: false
 			},
-			scale:{
+			scales:{
+				y: {
 				ticks:{
 					suggestedMin: 0,
 					suggestedMax: 5,
 					stepSize: 1,
 					fontSize: 9
+				}
 				}
 			},
 			tooltips:{
