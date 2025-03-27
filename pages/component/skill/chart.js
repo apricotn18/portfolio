@@ -8,12 +8,12 @@ export default function openChart (element) {
 				'JavaScript',
 				'TypeScript',
 				['React', 'Next.js'],
-				'Jest', 
-				['Photoshop', 'Illustrator']
+				'Node.js', 
+				'Jest'
 			],
 			datasets: [{
 				label: 'スキル',
-				data: [3, 2, 2, 1, 3],
+				data: [3, 2, 2, 1, 1],
 				backgroundColor: 'RGBA(145,53,95,.2)',
 				borderColor: 'RGBA(145,53,95,1)',
 				borderWidth: 1,
