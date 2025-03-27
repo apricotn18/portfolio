@@ -5,7 +5,7 @@ export default function openChart (element) {
 		type: 'radar',
 		data: {
 			labels: [
-				'JavaScript',
+				['HTML/CSS', 'JavaScript'],
 				'TypeScript',
 				['React', 'Next.js'],
 				'Node.js', 
@@ -13,7 +13,7 @@ export default function openChart (element) {
 			],
 			datasets: [{
 				label: 'スキル',
-				data: [3, 2, 2, 1, 1],
+				data: [5, 4, 3, 2, 2],
 				backgroundColor: 'RGBA(145,53,95,.2)',
 				borderColor: 'RGBA(145,53,95,1)',
 				borderWidth: 1,
