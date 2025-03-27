@@ -30,7 +30,7 @@ export default function openChart (element) {
 			scales:{
 				r: {
 					suggestedMin: 0,
-					suggestedMax: 5,
+					suggestedMax: 3,
 				}
 			},
 			tooltips:{
