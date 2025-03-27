@@ -13,7 +13,7 @@ export default function openChart (element) {
 			],
 			datasets: [{
 				label: 'スキル',
-				data: [4, 3, 2, 2, 2],
+				data: [3, 2, 1, 1, 1],
 				backgroundColor: 'RGBA(145,53,95,.2)',
 				borderColor: 'RGBA(145,53,95,1)',
 				borderWidth: 1,
@@ -27,10 +27,10 @@ export default function openChart (element) {
 			legend: {
 				display: false
 			},
-			scale:{
+			scales:{
 				ticks:{
-					suggestedMin: 1,
-					suggestedMax: 4,
+					suggestedMin: 0,
+					suggestedMax: 3,
 					stepSize: 1,
 					fontSize: 9
 				}
