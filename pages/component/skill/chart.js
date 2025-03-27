@@ -31,6 +31,8 @@ export default function openChart (element) {
 				r: {
 					suggestedMin: 0,
 					suggestedMax: 3,
+					stepSize: 1,
+					fontSize: 9
 				}
 			},
 			tooltips:{
