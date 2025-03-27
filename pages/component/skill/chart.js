@@ -34,7 +34,7 @@ export default function openChart (element) {
 				},
 				ticks: {
 					stepSize: 1,
-					fontSize: 9
+					// fontSize: 9
 				}
 			},
 			tooltips:{
