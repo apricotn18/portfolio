@@ -13,7 +13,7 @@ export default function openChart (element) {
 			],
 			datasets: [{
 				label: 'スキル',
-				data: [5, 4, 3, 2, 2],
+				data: [3, 2, 1, 1, 1],
 				backgroundColor: 'RGBA(145,53,95,.2)',
 				borderColor: 'RGBA(145,53,95,1)',
 				borderWidth: 1,
