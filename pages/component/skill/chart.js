@@ -5,7 +5,7 @@ export default function openChart (element) {
 		type: 'radar',
 		data: {
 			labels: [
-				['HTML/CSS', 'JavaScript'],
+				['HTML', 'CSS', 'JavaScript'],
 				'TypeScript',
 				['React', 'Next.js'],
 				'Node.js', 
