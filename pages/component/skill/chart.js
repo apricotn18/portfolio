@@ -29,8 +29,8 @@ export default function openChart (element) {
 			},
 			scale:{
 				ticks:{
-					min: 0,
-					max: 3,
+					suggestedMin: 0,
+					suggestedMax: 3,
 					stepSize: 1,
 					fontSize: 9
 				}
