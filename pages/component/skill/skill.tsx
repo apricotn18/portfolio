@@ -52,11 +52,9 @@ export default function Page() {
 							現在はReact.js関連のフレームワークを勉強中。今後はNode.jsやテストの勉強もしていきたいと考えます。
 						</p>
 						<ol className={styles.level}>
-							<li>5.  実務レベル</li>
-							<li>4.  実務で軽く使用あり、習熟が必要</li>
-							<li>3.  勉強したが、実務で使用経験なし</li>
-							<li>2.  勉強中</li>
-							<li>1.  勉強していない</li>
+							<li>3.  実務レベル</li>
+							<li>2.  実務で軽く使用あり、習熟が必要</li>
+							<li>1.  勉強中</li>
 						</ol>
 					</div>
 				</div>
