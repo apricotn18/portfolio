@@ -28,11 +28,9 @@ export default function openChart (element) {
 				display: false
 			},
 			scales:{
-				ticks:{
+				r: {
 					suggestedMin: 0,
 					suggestedMax: 5,
-					// stepSize: 1,
-					// fontSize: 9
 				}
 			},
 			tooltips:{
