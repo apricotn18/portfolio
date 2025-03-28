@@ -47,9 +47,10 @@ export default function Page() {
 					</div>
 					<div>
 						<p>
-							HTML / CSSは疑似要素やアニメーション、セマンティックなマークアップ（SEO）が可能です。デザインツールも実務レベルで使用できます。JavaScriptはインタラクションの実装、APIの取得・操作、非同期処理など実務レベルで使用できます。<br />
-							TypeScriptは簡単な型指定ができますが、習熟が必要です。<br />
-							React(Next.js) / Node.js / Justは公式チュートリアルやリファレンス本を読了し、簡単なWebアプリを個人開発しましたが、業務で使用したことはありません。
+							HTML / CSSは疑似要素やアニメーション、セマンティックなマークアップ（SEO）が可能です。デザインツールも実務レベルで使用できます。<br />
+							JavaScriptはインタラクションの実装、APIの取得・操作、非同期処理など実務レベルで使用できます。<br />
+							TypeScriptは単純な型指定ができます。<br />
+							React (Next.js) / Node.js / Justは公式チュートリアルやリファレンス本を読了し、ポートフォリオにある簡単なWebアプリを個人開発しました。
 						</p>
 						<ol className={styles.level}>
 							<li>3.  実務レベル</li>
