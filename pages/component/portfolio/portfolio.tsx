@@ -4,6 +4,7 @@ import Image, { StaticImageData } from 'next/image';
 import styles from './portfolio.module.scss';
 import imgWeekDinner from './week-dinner.png';
 import imgWeatherApp from './weather-app.png';
+import imgFoodExpensesApp from './gas-food-expenses.png';
 
 type Work = {
 	title: string;
@@ -28,20 +29,6 @@ const works = [
 		],
 		url: 'https://github.com/apricotn18/week-dinner',
 	},
-	,
-	{
-		title: 'ブログ',
-		description: [
-			'てすと'
-		],
-		environment: [
-			'Next.js',
-			'TypeScript',
-			'AMP',
-		],
-		image: imgWeatherApp,
-		url: './',
-	},
 	{
 		title: '天気予報アプリ',
 		description: [
@@ -53,7 +40,21 @@ const works = [
 			'Open Weather Map API',
 		],
 		image: imgWeatherApp,
-		url: 'https://github.com/apricotn18/weather-app',
+		url: 'https://github.com/apricotn18/weather-app/',
+	},
+	{
+		title: '食費入力bot',
+		description: [
+			'オリジナルのLINE botから金額を送信すると、GASでスプレッドシートの最終行へ書き込みます。',
+			'また、Zaimアプリにも書き込めるようにしました。'
+		],
+		environment: [
+			'Google Apps Script',
+			'LINE Developers',
+			'Zaim API',
+		],
+		image: imgFoodExpensesApp,
+		url: 'https://github.com/apricotn18/gas-food-expenses/',
 	}
 ] as Work[];
 
@@ -106,10 +107,10 @@ export default function Page() {
 									))}
 								</p>
 								<div className={styles.environment}>
-									環境：{item.environment.join(' / ')}
+									{item.environment.join(' / ')}
 								</div>
 								<a href={item.url} className={styles.link} target="_blank">
-									ページを開く
+									githubを開く
 								</a>
 							</div>
 						</motion.li>
