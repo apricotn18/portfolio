@@ -4,36 +4,21 @@ table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,head
 hgroup,menu,nav,section,time,mark,audio,video {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	outline: 0;
-	vertical-align: baseline;
-	font-family: 'Lexend Deca', 'Kosugi', sans-serif;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 1.5;
-	background: transparent;
+	box-sizing: border-box;
 }
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
 }
 body {
-	color: #555;
+	color: #9C8E6E;
 	text-align: center;
-	background-color: #dcdadf;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 14px;
 }
 img {
 	line-height: 0;
 	vertical-align: bottom;
-}
-article, aside, dialog, figure, footer, header, hgroup, nav, section {
-	display: block;
-}
-nav ul,ol,li {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
 }
 table {
 	border-collapse: collapse;

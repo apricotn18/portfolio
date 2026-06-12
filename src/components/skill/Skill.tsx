@@ -1,27 +1,8 @@
 import { useEffect, useCallback, useRef } from 'react';
-import { motion } from 'framer-motion';
 import openChart from './chart.js';
-import styles from './skill.module.scss';
+import styles from './styles.module.scss';
 
-const fadeInSetting = {
-	initial: {
-		opacity: 0,
-		transform: 'translateY(80px)',
-	},
-	whileInView: {
-		opacity: 1,
-		transform: 'translateY(0)',
-	},
-	transition: {
-		duration: .5,
-	},
-	viewport: {
-		once: true,
-		margin: '0px 0px -120px',
-	}
-};
-
-export default function Page() {
+export default function Skill() {
 	const chart = useRef<HTMLCanvasElement>(null!);
 
 	const handleScroll = useCallback(() => {
@@ -37,7 +18,7 @@ export default function Page() {
 
 	return (
 		<div id="skill" className={styles.wrapper}>
-			<motion.div className={styles.inner} {...fadeInSetting}>
+			<div className={styles.inner}>
 				<h2 className={styles.title}>
 					skill
 				</h2>
@@ -59,7 +40,7 @@ export default function Page() {
 						</ol>
 					</div>
 				</div>
-			</motion.div>
+			</div>
 		</div>
 	);
 }
