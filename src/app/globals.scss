@@ -9,11 +9,14 @@ hgroup,menu,nav,section,time,mark,audio,video {
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	--hue-5: #e38a8a;
+	--hue-1: #d994e0;
+	--yellow: #ffdb98;
 }
 body {
 	color: #9C8E6E;
 	text-align: center;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: var(--font-noto-sans), sans-serif;
 	font-size: 14px;
 }
 img {
