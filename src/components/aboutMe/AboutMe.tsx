@@ -2,7 +2,7 @@ import { useEffect, useCallback, useRef } from 'react';
 import openChart from './chart.js';
 import styles from './styles.module.scss';
 
-export default function Skill() {
+export default function AboutMe() {
 	const chart = useRef<HTMLCanvasElement>(null!);
 
 	const handleScroll = useCallback(() => {
@@ -17,12 +17,12 @@ export default function Skill() {
 	}, [handleScroll]);
 
 	return (
-		<div id="skill" className={styles.wrapper}>
+		<section id="about-me" className={styles.wrapper}>
 			<div className={styles.inner}>
 				<h2 className={styles.title}>
-					skill
+					About Me
 				</h2>
-				<div className={styles.column}>
+				{/* <div className={styles.column}>
 					<div className={styles.chartWrapper}>
 						<canvas className={styles.chart} ref={chart}></canvas>
 					</div>
@@ -39,8 +39,8 @@ export default function Skill() {
 							<li>1.  勉強中、実務で使用経験なし</li>
 						</ol>
 					</div>
-				</div>
+				</div> */}
 			</div>
-		</div>
+		</section>
 	);
 }

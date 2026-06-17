@@ -1,13 +1,12 @@
 "use client"
 
 import { motion, useMotionValue, useTransform } from "motion/react";
-import { useState, useEffect, useRef } from "react";
-import { useElementDimensions } from '@/lib/useElementDimensions';
-import Title from '../title/Title';
+import { useEffect, useRef } from "react";
 import styles from './styles.module.scss';
+import { useElementDimensions } from '@/lib/useElementDimensions';
+
 
 export default function Top() {
-	const [isCompleteTyping, setIsCompleteTyping] = useState(false);
 	const ref = useRef<HTMLDivElement>(null);
 	const [{ width, height, top, left }, measure] = useElementDimensions(ref);
 	const gradientX = useMotionValue(0.5);
@@ -39,28 +38,21 @@ export default function Top() {
 				ref={ref}
 				style={{
 					background,
-					width: '100%',
-					height: '100%',
+					width: '100vw',
+					height: '100vh',
+					cursor: 'none',
 					opacity: 0.5,
 				}}
 			/>
 			<div className={styles.inner}>
-				<h1 className={styles.titleWrapper}>
-					<Title name="Kyoko" delay={500} className={styles.firstName} />
-					<Title name="Kasahara." delay={1500} className={styles.lastName} setIsCompleteTyping={setIsCompleteTyping} />
+				<h1>
+					<span className={styles.firstName}>Kyoko</span>
+					<span className={styles.lastName}>Kasahara</span>
 				</h1>
-				<div className={styles.subtitle + ' ' + (isCompleteTyping ? styles.isDisplay : '')}>
+				<div className={styles.subtitle}>
 					Frontend Developer<br />
 					TypeScript / React / Next.js
 				</div>
-				<div className={styles.buttonWrapper + ' ' + (isCompleteTyping ? styles.isDisplay : '')}>
-					<a href="#about-me" className={styles.button}>About Me</a>
-					<a href="#portfolio" className={styles.button}>Portfolio</a>
-					<a href="#ask-ai" className={styles.button}>Ask AI</a>
-				</div>
-			</div>
-			<div className={styles.scrollIndicator + ' ' + (isCompleteTyping ? styles.isDisplay : '')}>
-				<div className={styles.scrollArrow}></div>
 			</div>
 		</section>
 	);
