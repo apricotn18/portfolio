@@ -23,7 +23,7 @@ const playfair = Playfair({
 });
 
 export const metadata: Metadata = {
-	title: 'KYOKO NOZAKI Portfolio',
+	title: 'KYOKO KASAHARA Portfolio',
 	description: 'Portfolio website',
 };
 

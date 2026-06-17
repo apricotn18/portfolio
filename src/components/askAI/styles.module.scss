@@ -1,0 +1,138 @@
+.askAI {
+	padding: 80px 62px;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.heading {
+	font-size: 48px;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+.description {
+	font-size: 16px;
+	color: #666;
+	margin-bottom: 32px;
+}
+
+.chatWindow {
+	width: 100%;
+	max-width: 680px;
+	min-height: 320px;
+	max-height: 480px;
+	overflow-y: auto;
+	border: 1px solid #e0e0e0;
+	border-radius: 12px;
+	padding: 20px;
+	margin-bottom: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	background: #fafafa;
+}
+
+.placeholder {
+	color: #bbb;
+	font-size: 14px;
+	text-align: center;
+	margin: auto;
+}
+
+.message {
+	padding: 10px 14px;
+	border-radius: 10px;
+	font-size: 15px;
+	line-height: 1.6;
+	max-width: 85%;
+	white-space: pre-wrap;
+
+	&.user {
+		align-self: flex-end;
+		background: #1a1a1a;
+		color: #fff;
+		border-bottom-right-radius: 2px;
+	}
+
+	&.assistant {
+		align-self: flex-start;
+		background: #fff;
+		border: 1px solid #e0e0e0;
+		color: #1a1a1a;
+		border-bottom-left-radius: 2px;
+	}
+
+	&.error {
+		background: #fff5f5;
+		border-color: #fca5a5;
+		color: #b91c1c;
+	}
+}
+
+.loading {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 14px;
+
+	span {
+		display: block;
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: #aaa;
+		animation: bounce 1.2s ease-in-out infinite;
+
+		&:nth-child(2) { animation-delay: 0.2s; }
+		&:nth-child(3) { animation-delay: 0.4s; }
+	}
+}
+
+@keyframes bounce {
+	0%, 80%, 100% { transform: translateY(0); }
+	40% { transform: translateY(-6px); }
+}
+
+.form {
+	display: flex;
+	gap: 10px;
+	width: 100%;
+	max-width: 680px;
+}
+
+.input {
+	flex: 1;
+	padding: 12px 16px;
+	font-size: 15px;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	outline: none;
+	transition: border-color 0.2s;
+
+	&:focus {
+		border-color: #1a1a1a;
+	}
+
+	&:disabled {
+		background: #f5f5f5;
+	}
+}
+
+.button {
+	padding: 12px 24px;
+	font-size: 15px;
+	background: #1a1a1a;
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: opacity 0.2s;
+
+	&:disabled {
+		opacity: 0.4;
+		cursor: not-allowed;
+	}
+}

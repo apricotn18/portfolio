@@ -3,18 +3,18 @@ import openChart from './chart.js';
 import styles from './styles.module.scss';
 
 export default function AboutMe() {
-	const chart = useRef<HTMLCanvasElement>(null!);
+	// const chart = useRef<HTMLCanvasElement>(null!);
 
-	const handleScroll = useCallback(() => {
-		if (chart.current.getBoundingClientRect().top + 200 < window.innerHeight) {
-			openChart(chart.current);
-			window.removeEventListener('scroll', handleScroll);
-		}
-	}, []);
+	// const handleScroll = useCallback(() => {
+	// 	if (chart.current.getBoundingClientRect().top + 200 < window.innerHeight) {
+	// 		openChart(chart.current);
+	// 		window.removeEventListener('scroll', handleScroll);
+	// 	}
+	// }, []);
 
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
-	}, [handleScroll]);
+	// useEffect(() => {
+	// 	window.addEventListener('scroll', handleScroll);
+	// }, [handleScroll]);
 
 	return (
 		<section id="about-me" className={styles.wrapper}>

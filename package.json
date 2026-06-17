@@ -9,7 +9,9 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@google/genai": "^2.8.0",
 		"chart.js": "^4.4.7",
+		"dotenv": "^17.4.2",
 		"motion": "^12.40.0",
 		"next": "15.0.4",
 		"react": "^19.0.0",

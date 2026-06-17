@@ -1,5 +1,3 @@
-'use client';
-
 import Top from '@/components/top/Top';
 import AboutMe from '@/components/aboutMe/AboutMe';
 import Portfolio from '@/components/portfolio/Portfolio';

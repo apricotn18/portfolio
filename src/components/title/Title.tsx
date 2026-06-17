@@ -5,7 +5,7 @@ import useTypewriter from './useTypewriter';
 
 type Props = {
 	name: string;
-	delay: number;
+	delay?: number;
 	className: string;
 	setIsCompleteTyping?: (isComplete: boolean) => void;
 }

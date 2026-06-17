@@ -1,66 +1,75 @@
 "use client"
 
-import { motion, useMotionValue, useTransform } from "motion/react";
-import { useState, useEffect, useRef } from "react";
-import { useElementDimensions } from '@/lib/useElementDimensions';
+import { motion, useScroll, useTransform } from "motion/react";
+import { useState, useRef } from "react";
 import Title from '../title/Title';
 import styles from './styles.module.scss';
 
 export default function Top() {
+	// typing
 	const [isCompleteTyping, setIsCompleteTyping] = useState(false);
-	const ref = useRef<HTMLDivElement>(null);
-	const [{ width, height, top, left }, measure] = useElementDimensions(ref);
-	const gradientX = useMotionValue(0.5);
-	const gradientY = useMotionValue(0.5);
-	const background = useTransform(
-		() =>
-			`conic-gradient(from 0deg at calc(${
-				gradientX.get() * 100
-			}% - ${left}px) calc(${
-				gradientY.get() * 100
-			}% - ${top}px), var(--hue-5), var(--hue-1), var(--yellow), var(--hue-5))`
+	// scroll
+	const containerRef = useRef<HTMLDivElement>(null);
+	const { scrollYProgress } = useScroll({
+		target: containerRef,
+		offset: ["start start", "end start"],
+	});
+	const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.4]);
+	const bgBlur = useTransform(
+		scrollYProgress,
+		[0, 1],
+		["blur(0px)", "blur(12px)"]
 	);
-
-	useEffect(() => {
-		measure();
-	}, [measure]);
+	const bgOpacity = useTransform(scrollYProgress, [0, 0.8], [0, 0.5]);
+	const textY = useTransform(scrollYProgress, [0, 0.6], ["0%", "-30%"]);
+	const textOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.5]);
 
 	return (
-		<section
-			className={styles.top}
-			onPointerMove={(e) => {
-				if (width > 0 && height > 0) {
-					gradientX.set(e.clientX / width)
-					gradientY.set(e.clientY / height)
-				}
-			}}
-		>
+		<section className={styles.container} ref={containerRef}>
 			<motion.div
-				ref={ref}
+				className={styles.background}
 				style={{
-					background,
-					width: '100%',
-					height: '100%',
-					opacity: 0.5,
+					scale: bgScale,
+					filter: bgBlur,
+				}}
+			></motion.div>
+			<motion.div
+				className={styles.overlay}
+				style={{
+					opacity: bgOpacity,
 				}}
 			/>
 			<div className={styles.inner}>
-				<h1 className={styles.titleWrapper}>
-					<Title name="Kyoko" delay={500} className={styles.firstName} />
-					<Title name="Kasahara." delay={1500} className={styles.lastName} setIsCompleteTyping={setIsCompleteTyping} />
-				</h1>
-				<div className={styles.subtitle + ' ' + (isCompleteTyping ? styles.isDisplay : '')}>
-					Frontend Developer<br />
-					TypeScript / React / Next.js
-				</div>
-				<div className={styles.buttonWrapper + ' ' + (isCompleteTyping ? styles.isDisplay : '')}>
-					<a href="#about-me" className={styles.button}>About Me</a>
-					<a href="#portfolio" className={styles.button}>Portfolio</a>
-					<a href="#ask-ai" className={styles.button}>Ask AI</a>
-				</div>
-			</div>
-			<div className={styles.scrollIndicator + ' ' + (isCompleteTyping ? styles.isDisplay : '')}>
-				<div className={styles.scrollArrow}></div>
+				<motion.div
+					style={{
+						y: textY,
+						opacity: textOpacity,
+					}}
+				>
+					<motion.h1
+						className={styles.titleWrapper}
+					>
+						<Title name="Kyoko" className={styles.firstName} />
+						<Title name="Kasahara." delay={800} className={styles.lastName} setIsCompleteTyping={setIsCompleteTyping} />
+					</motion.h1>
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						className={styles.subtitle}
+					>
+						Frontend Developer<br />
+						TypeScript / React / Next.js
+					</motion.div>
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						className={styles.buttonWrapper}
+					>
+						<a href="#about-me" className={styles.button}>About Me</a>
+						<a href="#portfolio" className={styles.button}>Portfolio</a>
+						<a href="#ask-ai" className={styles.button}>Ask AI</a>
+					</motion.div>
+				</motion.div>
 			</div>
 		</section>
 	);
