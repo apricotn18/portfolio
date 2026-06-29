@@ -14,7 +14,7 @@ export default function Top() {
 				</div>
 				<p className={styles.description}>
 					カンプ通りの美しい実装と、APIで広げる可能性<br />
-					確かな技術力で、Webサイトに新しい機能をプラス
+					確かな技術力でWebサイトに新しい機能をプラスします
 				</p>
 			</div>
 		</section>

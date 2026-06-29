@@ -1,10 +1,11 @@
 .askAi {
-	padding: calc(547px * 100vw / 1280px - 21vw) 0 0;
+	padding: calc(597px * 100vw / 1280px - 24vw) 0 0;
 	margin-top: -25vw;
 	background-image: url(orange.svg);
 	background-size: 100vw;
 	background-position: top;
 	background-repeat: no-repeat;
+	filter: drop-shadow(0 -8px 16px rgba(0, 0, 0, 0.1));
 }
 
 .heading {

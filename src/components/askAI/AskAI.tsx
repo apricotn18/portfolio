@@ -8,7 +8,8 @@ import type { Message } from './types';
 
 const initMessage: Message = {
 	role: "assistant",
-	text: `ポートフォリオに関する質問にお答えします`,
+	text: `こんにちは！
+プロフィールなど、ポートフォリオにかかわる質問を何でもしてください！`,
 };
 
 export default function AskAI() {
