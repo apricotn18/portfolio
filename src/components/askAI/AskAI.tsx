@@ -52,18 +52,20 @@ export default function AskAI() {
 	}, [])
 
 	return (
-		<section id="ask-ai" className={styles.container}>
+		<section id="ask-ai" className={styles.askAi}>
 			<h2 className={styles.heading}>Ask AI</h2>
-			<ChatWindow
-				messages={messages}
-				isLoading={isLoading}
-			/>
-			<ChatForm
-				input={input}
-				isLoading={isLoading}
-				onChange={setInput}
-				onSubmit={handleSubmit}
-			/>
+			<div className={styles.inner}>
+				<ChatWindow
+					messages={messages}
+					isLoading={isLoading}
+				/>
+				<ChatForm
+					input={input}
+					isLoading={isLoading}
+					onChange={setInput}
+					onSubmit={handleSubmit}
+				/>
+			</div>
 		</section>
 	);
 }

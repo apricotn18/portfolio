@@ -1,15 +1,26 @@
-.container {
-	padding: 80px 62px;
-	background-image: url(background.gif);
+.askAi {
+	background-color: #FEC97F;
+}
+
+.heading {
+	color: #fff;
+}
+
+.inner {
+	max-width: 880px;
+	height: 80vh;
+	max-height: 560px;
+	margin: 50px auto 0;
 }
 
 .chatWindow {
 	display: flex;
 	flex-direction: column;
 	height: calc(100% - 99px);
-	padding: 30px 24px;
+	padding: 36px 30px;
+	border-radius: 20px;
 	overflow-y: auto;
-	background-color: #ede6e9;
+	background-color: #FEDBA9;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 
@@ -20,7 +31,7 @@
 
 .message {
 	margin: 0 0 18px;
-	padding: 14px 20px 11px;
+	padding: 20px 24px 16px;
 	border-radius: 14px;
 	max-width: 85%;
 	white-space: pre-wrap;
@@ -28,16 +39,16 @@
 
 	&.user {
 		align-self: flex-end;
-		padding-right: 24px;
+		padding-right: 28px;
 		color: #fff;
-		background-color: #7d4455;
+		background-color: #fca730;
 		border-bottom-right-radius: 2px;
 	}
 
 	&.assistant {
 		align-self: flex-start;
-		padding-left: 24px;
-		color: #7d4355;
+		padding-left: 28px;
+		color: #eea947;
 		background-color: #fff;
 		border-bottom-left-radius: 2px;
 	}
@@ -58,7 +69,7 @@
 		width: 5px;
 		height: 5px;
 		border-radius: 50%;
-		background-color: #9e8089;
+		background-color: #eea947;
 		animation: bounce 1.2s ease-in-out infinite;
 
 		&:nth-child(2) { animation-delay: 0.2s; }
@@ -75,34 +86,33 @@
 	position: relative;
 	display: flex;
 	width: 100%;
-	padding: 20px;
-	background-color: #877077;
+	margin-top: 20px;
 }
 
 .input {
 	width: 100%;
-	padding: 20px 80px 20px 24px;
+	padding: 24px 80px 24px 30px;
 	color: inherit;
 	font-size: 15px;
 	border: none;
 	outline: none;
 	background-color: #fff;
-	border-radius: 30px;
+	border-radius: 35px;
 	transition: border-color 0.2s;
 
 	&:disabled {
-		background-color: #d5cdd0;
+		background-color: #e5e1db;
 	}
 
 	&::placeholder {
-		color: #b5aaad;
+		color: #c2bbb2;
 	}
 }
 
 .button {
 	position: absolute;
 	top: 50%;
-	right: 32px;
+	right: 18px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -110,14 +120,14 @@
 	height: 40px;
 	border: none;
 	border-radius: 50%;
-	background-color: #5c424c;
+	background-color: #fca730;
 	color: #fff;
 	cursor: pointer;
 	transition: opacity 0.2s, background-color 0.2s;
 	transform: translateY(-50%);
 
 	&:hover:not(:disabled) {
-		background-color: #7a5a66;
+		background-color: #c9801a;
 	}
 
 	&:disabled {
