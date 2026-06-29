@@ -20,7 +20,7 @@ export default function Skill() {
 		<section id="skill" className={styles.skill}>
 			<div className={styles.inner}>
 				<h2 className={styles.title}>
-					skill
+					SKILL
 				</h2>
 				{/* <div className={styles.column}>
 					<div className={styles.chartWrapper}>
