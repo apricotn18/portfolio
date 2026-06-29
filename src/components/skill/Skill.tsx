@@ -2,7 +2,7 @@ import { useEffect, useCallback, useRef } from 'react';
 import openChart from './chart.js';
 import styles from './styles.module.scss';
 
-export default function AboutMe() {
+export default function Skill() {
 	// const chart = useRef<HTMLCanvasElement>(null!);
 
 	// const handleScroll = useCallback(() => {
@@ -17,10 +17,10 @@ export default function AboutMe() {
 	// }, [handleScroll]);
 
 	return (
-		<section id="about-me" className={styles.wrapper}>
+		<section id="skill" className={styles.skill}>
 			<div className={styles.inner}>
 				<h2 className={styles.title}>
-					About Me
+					skill
 				</h2>
 				{/* <div className={styles.column}>
 					<div className={styles.chartWrapper}>

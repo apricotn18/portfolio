@@ -5,9 +5,9 @@ export default function Header() {
 		<header className={styles.header}>
 			<h1 className={styles.name}>K.KASAHARA</h1>
 			<div className={styles.buttonWrapper}>
-				<a href="#WORK">WORK</a>
-				<a href="#SKILL">SKILL</a>
-				<a href="#Ask-AI">Ask AI</a>
+				<a href="#work">WORK</a>
+				<a href="#skill">SKILL</a>
+				<a href="#ask-ai">Ask AI</a>
 			</div>
 		</header>
 	);

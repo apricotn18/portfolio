@@ -1,6 +1,6 @@
 import Top from '@/components/top/Top';
-import AboutMe from '@/components/aboutMe/AboutMe';
-import Portfolio from '@/components/portfolio/Portfolio';
+import Skill from '@/components/skill/Skill';
+import Work from '@/components/work/Work';
 import AskAI from '@/components/askAI/AskAI';
 
 export default function Home() {
@@ -8,8 +8,8 @@ export default function Home() {
 		<>
 			<main>
 				<Top />
-				<AboutMe />
-				<Portfolio />
+				<Work />
+				<Skill />
 				<AskAI />
 			</main>
 		</>
