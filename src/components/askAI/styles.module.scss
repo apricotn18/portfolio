@@ -1,16 +1,28 @@
 .askAi {
-	background-color: #FEC97F;
+	padding: calc(547px * 100vw / 1280px - 21vw) 0 0;
+	margin-top: -25vw;
+	background-image: url(orange.svg);
+	background-size: 100vw;
+	background-position: top;
+	background-repeat: no-repeat;
 }
 
 .heading {
+	position: relative;
 	color: #fff;
+}
+
+.wrapper {
+	background-color: #FEC97F;
+	margin-top: 60px;
+	padding-bottom: 70px;
 }
 
 .inner {
 	max-width: 880px;
 	height: 80vh;
 	max-height: 560px;
-	margin: 50px auto 0;
+	margin: auto;
 }
 
 .chatWindow {
@@ -86,7 +98,7 @@
 	position: relative;
 	display: flex;
 	width: 100%;
-	margin-top: 20px;
+	margin-top: 24px;
 }
 
 .input {
