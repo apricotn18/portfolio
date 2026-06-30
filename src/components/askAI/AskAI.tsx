@@ -1,10 +1,10 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import styles from './styles.module.scss';
 import { ChatWindow } from './ChatWindow';
 import { ChatForm } from './ChatForm';
 import type { Message } from './types';
+import styles from './styles.module.scss';
 
 const initMessage: Message = {
 	role: "assistant",
@@ -54,9 +54,10 @@ export default function AskAI() {
 
 	return (
 		<section id="ask-ai" className={styles.askAi}>
-			<h2 className={styles.heading}>Ask AI</h2>
 			<div className={styles.wrapper}>
+				<h2 className={styles.title}>Ask AI</h2>
 				<div className={styles.inner}>
+					<div className={styles.orange}></div>
 					<ChatWindow
 						messages={messages}
 						isLoading={isLoading}
