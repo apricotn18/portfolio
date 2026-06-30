@@ -1,25 +1,38 @@
+$imageH: 554px * 100vw / 1280px;
+
 .askAi {
-	padding: calc(597px * 100vw / 1280px - 24vw) 0 0;
-	margin-top: -25vw;
-	background-image: url(orange.svg);
-	background-size: 100vw;
-	background-position: top;
-	background-repeat: no-repeat;
-	filter: drop-shadow(0 -8px 16px rgba(0, 0, 0, 0.1));
+	margin-top: calc(-1 * $imageH + 25vw);
+	padding-bottom: 0;
 }
 
-.heading {
+.title {
 	position: relative;
 	color: #fff;
 }
 
 .wrapper {
-	background-color: #ffbd61;
-	margin-top: 60px;
+	position: relative;
+	background: linear-gradient(180deg, transparent 10vw, #ffbd61 10vw);
 	padding-bottom: 70px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: calc(100% - 23vw);
+		left: 0;
+		display: block;
+		width: 100%;
+		height: $imageH;
+		background-image: url(orange.svg);
+		background-size: 100vw;
+		background-position: bottom;
+		background-repeat: no-repeat;
+	}
+
 }
 
 .inner {
+	position: relative;
 	max-width: 880px;
 	height: 80vh;
 	max-height: 560px;

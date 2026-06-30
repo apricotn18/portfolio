@@ -1,9 +1,11 @@
 
+$imageH: 554px * 100vw / 1280px;
+
 .skill {
 	position: relative;
 	overflow: hidden;
 	background: linear-gradient(180deg, #fff5e3 0%, #ffcd7d 100%);
-	padding-bottom: calc(90px + 25vw);
+	padding-bottom: calc(2 * $imageH - 48vw - 30px);
 }
 
 .bubbleContainer {
