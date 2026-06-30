@@ -1,7 +1,7 @@
-$imageH: 554px * 100vw / 1280px;
+@use '../../styles/variables' as *;
 
 .askAi {
-	margin-top: calc(-1 * $imageH + 25vw);
+	margin-top: calc(-1 * $orangeImgH);
 	padding-bottom: 0;
 }
 
@@ -18,11 +18,11 @@ $imageH: 554px * 100vw / 1280px;
 	&::before {
 		content: "";
 		position: absolute;
-		bottom: calc(100% - 23vw);
+		bottom: calc(100% - $orangePositionBottom);
 		left: 0;
 		display: block;
 		width: 100%;
-		height: $imageH;
+		height: $orangeImgH;
 		background-image: url(orange.svg);
 		background-size: 100vw;
 		background-position: bottom;
