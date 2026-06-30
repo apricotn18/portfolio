@@ -14,7 +14,7 @@
 }
 
 .wrapper {
-	background-color: #FEC97F;
+	background-color: #ffbd61;
 	margin-top: 60px;
 	padding-bottom: 70px;
 }
@@ -33,7 +33,7 @@
 	padding: 30px 30px 14px;
 	border-radius: 20px;
 	overflow-y: auto;
-	background-color: #FEDBA9;
+	background-color: #ffe5bf;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 
@@ -54,7 +54,7 @@
 		align-self: flex-end;
 		padding-right: 28px;
 		color: #fff;
-		background-color: #fca730;
+		background-color: #ffb855;
 		border-bottom-right-radius: 2px;
 	}
 
@@ -82,7 +82,7 @@
 		width: 5px;
 		height: 5px;
 		border-radius: 50%;
-		background-color: #eea947;
+		background-color: #ffb855;
 		animation: bounce 1.2s ease-in-out infinite;
 
 		&:nth-child(2) { animation-delay: 0.2s; }
@@ -104,7 +104,7 @@
 
 .input {
 	width: 100%;
-	padding: 24px 80px 24px 30px;
+	padding: 25px 80px 22px 30px;
 	color: inherit;
 	font-size: 15px;
 	border: none;
@@ -118,7 +118,7 @@
 	}
 
 	&::placeholder {
-		color: #c2bbb2;
+		color: #878787;
 	}
 }
 
@@ -133,14 +133,14 @@
 	height: 40px;
 	border: none;
 	border-radius: 50%;
-	background-color: #fca730;
+	background-color: #ffb855;
 	color: #fff;
 	cursor: pointer;
 	transition: opacity 0.2s, background-color 0.2s;
 	transform: translateY(-50%);
 
 	&:hover:not(:disabled) {
-		background-color: #c9801a;
+		background-color: #ca8a31;
 	}
 
 	&:disabled {
