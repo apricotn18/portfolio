@@ -13,7 +13,7 @@ html {
 body {
 	color: #000;
 	text-align: center;
-	font-family: var(--font-roboto), sans-serif;
+	font-family: var(--font-noto-sans), sans-serif;
 	font-size: 16px;
 	line-height: 1.4;
 }
@@ -23,7 +23,8 @@ section {
 h2 {
 	font-size: 24px;
 	letter-spacing: 5px;
-	margin-bottom: 50px;
+	margin-bottom: 70px;
+	font-family: var(--font-roboto);
 }
 img {
 	line-height: 0;

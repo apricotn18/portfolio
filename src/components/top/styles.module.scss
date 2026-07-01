@@ -3,7 +3,8 @@
 	width: 100%;
 	height: 95vh;
 	overflow: hidden;
-	background: linear-gradient(158deg, #fff7df 15%, #ffc097 80%);
+	background: linear-gradient(158deg, #fff7df 15%, #ffbe97 80%);
+	font-family: var(--font-roboto);
 }
 
 .inner {
@@ -15,14 +16,14 @@
 }
 
 .name {
-	font-size: 76px;
+	font-size: 77px;
 	font-weight: bold;
 	letter-spacing: 10px;
 }
 
 .subtitle {
 	font-size: 24px;
-	letter-spacing: 7px;
+	letter-spacing: 8px;
 }
 
 .description {
