@@ -1,12 +1,12 @@
 import { Chart } from "./Chart";
 import { Bubble } from "./Bubble";
 import { SKILLS } from "./data";
-
 import styles from './styles.module.scss';
 
 export default function Skill() {
 	return (
 		<section id="skill" className={styles.skill}>
+			<Bubble />
 			<h2 className={styles.title}>
 				SKILL
 			</h2>
@@ -20,11 +20,11 @@ export default function Skill() {
 						<div className={styles.text}>
 							<h3 className={styles.name}>{skill.name}</h3>
 							<p className={styles.description}>{skill.description}</p>
+							{skill.note && <p className={styles.note}>{skill.note}</p>}
 						</div>
 					</div>
 				))}
 			</div>
-			<Bubble />
 		</section>
 	);
 }
