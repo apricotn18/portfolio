@@ -6,7 +6,7 @@ export default function Top() {
 	return (
 		<section className={styles.container}>
 			<div className={styles.inner}>
-				<h1 className={styles.name}>
+				<h1 id="hero-name" className={styles.name}>
 					K.KASAHARA
 				</h1>
 				<div className={styles.subtitle}>
