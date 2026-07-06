@@ -25,10 +25,6 @@
 	display: flex;
 	width: calc(50%	- 30px);
 	gap: 30px;
-
-	&:last-child {
-		width: 55%;
-	}
 }
 
 .chart {

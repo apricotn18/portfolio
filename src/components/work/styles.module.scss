@@ -1,13 +1,10 @@
 .work {
 	position: relative;
+	color: #fff;
 	background-color: #ffad78;
 }
 
-.title {
-	color: #fff;
-}
-
-.waveWrapper {
+.wave {
 	position: absolute;
 	left: 0;
 	bottom: calc(100% - 5vw);
@@ -23,4 +20,28 @@
 @keyframes waveScroll {
 	from { background-position: 0 bottom; }
 	to { background-position: 160vw bottom; }
+}
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 60px;
+	gap: 60px;
+	margin-top: 50px;
+
+	li {
+		width: calc(50% - 30px);
+	}
+}
+
+.item {
+	text-align: left;
+}
+
+.image {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 13px;
+	overflow: hidden;
 }
