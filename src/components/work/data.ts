@@ -3,7 +3,7 @@ import dammy from './dammy.png';
 export const WORKS = [
 	{
 		name: 'week-dinner',
-		description: '楽天レシピAPIから1週間分の献立を自動提案するアプリです。気分に合わない日はAIに1品だけ相談できる機能も搭載。自動化とAI提案を組み合わせています',
+		description: '楽天レシピAPIから1週間分の献立を自動提案するアプリ。気分に合わない日はAIに1品だけ相談できる機能も搭載。自動化とAI提案を組み合わせています',
 		image: dammy,
 		skill: [
 			'React',
@@ -14,7 +14,7 @@ export const WORKS = [
 	},
 	{
 		name: 'ai-chat',
-		description: 'Gemini APIを使った星共占いテーマの対話型チャットアプリです。会話の流れを重視したUI設計で、最新のNext.js・Reactを採用しています',
+		description: 'Gemini APIを使った星共占いテーマの対話型チャットアプリ。会話の流れを重視したUI設計で、最新のNext.js・Reactを採用しています',
 		image: dammy,
 		skill: [
 			'React',
@@ -25,7 +25,7 @@ export const WORKS = [
 	},
 	{
 		name: 'weather-app',
-		description: '現在地や選択した都道府県の天気を表示するアプリです。位置情報が使えない場合は東京の座標に自動フォールバックする設計です',
+		description: '現在地や選択した都道府県の天気を表示するアプリ。位置情報が使えない場合は東京の座標に自動フォールバックする設計です',
 		image: dammy,
 		skill: [
 			'React',
@@ -35,7 +35,7 @@ export const WORKS = [
 	},
 	{
 		name: 'gas-food-expenses',
-		description: 'LINEに送るだけで食費をスプレッドシートとZaimに自動記録するbotです。日々の入力を減らす業務自動化の実例です',
+		description: 'LINEに送るだけで食費をスプレッドシートとZaimに自動記録するbot。日々の入力を減らす業務自動化の実例です',
 		image: dammy,
 		skill: [
 			'GAS',

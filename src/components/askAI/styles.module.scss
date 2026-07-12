@@ -57,7 +57,7 @@
 
 .message {
 	margin: 0 0 15px;
-	padding: 20px 24px 16px;
+	padding: 18px 22px 16px;
 	border-radius: 14px;
 	max-width: 85%;
 	white-space: pre-wrap;
@@ -65,7 +65,7 @@
 
 	&.user {
 		align-self: flex-end;
-		padding-right: 28px;
+		padding-right: 25px;
 		color: #fff;
 		background-color: #ffb855;
 		border-bottom-right-radius: 2px;
@@ -73,7 +73,7 @@
 
 	&.assistant {
 		align-self: flex-start;
-		padding-left: 28px;
+		padding-left: 25px;
 		color: #eea947;
 		background-color: #fff;
 		border-bottom-left-radius: 2px;
@@ -119,7 +119,6 @@
 	width: 100%;
 	padding: 25px 80px 22px 30px;
 	color: inherit;
-	font-size: 15px;
 	border: none;
 	outline: none;
 	background-color: #fff;

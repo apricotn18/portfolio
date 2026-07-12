@@ -14,18 +14,18 @@ function toUserMessage(e: unknown): { message: string; status: number } {
 	const geminiStatus = body?.error?.status;
 
 	if (code === 429 || geminiStatus === 'RESOURCE_EXHAUSTED') {
-		return { message: 'APIの利用制限に達しました。しばらくしてからお試しください。', status: 429 };
+		return { message: 'APIの利用制限に達しました。しばらくしてからお試しください', status: 429 };
 	}
 	if (code === 503 || geminiStatus === 'UNAVAILABLE') {
-		return { message: 'AIが混み合っています。しばらくしてからお試しください。', status: 503 };
+		return { message: 'AIが混み合っています。しばらくしてからお試しください', status: 503 };
 	}
 	if (code === 401 || code === 403) {
-		return { message: 'APIキーが無効です。', status: 403 };
+		return { message: 'APIキーが無効です', status: 403 };
 	}
 	if (code === 404) {
-		return { message: 'AIモデルが見つかりません。', status: 404 };
+		return { message: 'AIモデルが見つかりません', status: 404 };
 	}
-	return { message: 'エラーが発生しました。もう一度お試しください。', status: 500 };
+	return { message: 'エラーが発生しました。もう一度お試しください', status: 500 };
 }
 
 export async function POST(req: NextRequest) {
