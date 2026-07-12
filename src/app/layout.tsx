@@ -8,14 +8,14 @@ const roboto = Roboto({
 	subsets: ['latin'],
 	variable: '--font-roboto',
 	display: 'swap',
-	weight: ['400', '700'],
+	weight: ['400', '500', '700'],
 });
 
 const notoSans = Noto_Sans_JP({
 	subsets: ['latin'],
 	variable: '--font-noto-sans',
 	display: 'swap',
-	weight: ['400', '700'],
+	weight: ['400', '500', '700'],
 });
 
 export const metadata: Metadata = {
