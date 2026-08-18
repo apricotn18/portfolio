@@ -17,8 +17,10 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding: 0 60px;
 	gap: 60px;
+	max-width: 880px;
+	margin: auto;
+	padding: 0 60px;
 }
 
 .item {

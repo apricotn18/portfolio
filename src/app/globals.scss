@@ -42,4 +42,10 @@ a {
 	&:hover {
 		opacity: .5;
 	}
+	
+	&.noHover {
+		&:hover {
+			opacity: 1;
+		}
+	}
 }

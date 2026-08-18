@@ -9,11 +9,18 @@ export default function Work() {
 			<ul className={styles.list}>
 				{WORKS.map((work, index: number) => (
 					<li key={index} className={styles.item}>
-						<Image
-							className={styles.image}
-							src={work.image}
-							alt={work.name}
-						/>
+						<a
+							className="noHover"
+							href={work.githubUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Image
+								className={styles.image}
+								src={work.image}
+								alt={work.name}
+							/>
+						</a>
 						<h3 className={styles.name}>
 							<a
 								href={work.githubUrl}
