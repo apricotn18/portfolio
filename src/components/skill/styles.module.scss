@@ -80,3 +80,15 @@
 	75%  { transform: translateX(9px);   bottom: 75%;}
 	100% { transform: translateX(-6px);  bottom: 100%;}
 }
+
+@media screen and (max-width: 600px) {
+	.inner {
+		gap: 40px;
+		padding: 0 20px;
+	}
+
+	.item {
+		width: 100%;
+		gap: 20px;
+	}
+}

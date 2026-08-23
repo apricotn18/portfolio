@@ -77,3 +77,14 @@
 	50% { transform: translateY(0); }
 	100% { transform: translateY(100%); }
 }
+
+@media screen and (max-width: 600px) {
+	.text {
+		padding: 0 20px;
+	}
+
+	.line {
+		position: absolute;
+		bottom: -15px;
+	}
+}

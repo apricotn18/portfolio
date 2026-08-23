@@ -49,3 +49,15 @@ a {
 		}
 	}
 }
+
+@media screen and (max-width: 600px) {
+	section {
+		padding: 80px 0;
+	}
+
+	h2 {
+		font-size: 6vw;
+		letter-spacing: 1.5vw;
+		margin-bottom: 40px;
+	}
+}
