@@ -171,7 +171,7 @@
 	}
 	
 	.chatWindow {
-		padding: 30px 20px 7px;
+		padding: 30px 20px 20px;
 		border-radius: 10px;
 	}
 
@@ -192,12 +192,13 @@
 	}
 
 	.input {
-		padding: 16px 60px 13px 20px;
+		padding: 17px 55px 16px 20px;
+		font-size: 16px;
 	}
 
 	.button {
-		right: 8px;
-		width: 35px;
-		height: 35px;
+		right: 6px;
+		width: 40px;
+		height: 40px;
 	}
 }
