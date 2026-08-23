@@ -79,6 +79,14 @@
 }
 
 @media screen and (max-width: 600px) {
+	.profile {
+		padding-top: 10vh;
+	}
+
+	.wave {
+		bottom: 100%;
+	}
+
 	.text {
 		padding: 0 20px;
 	}
