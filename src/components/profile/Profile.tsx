@@ -1,14 +1,32 @@
+"use client"
+
+import { motion } from 'motion/react';
+import { fadeUp, fadeUpViewport } from '@/lib/motion';
 import styles from './styles.module.scss';
 
 export default function Profile() {
 	return (
 		<section id="profile" className={styles.profile}>
 			<div className={styles.wave} />
-			<p className={styles.text}>
+			<motion.p
+				className={styles.text}
+				variants={fadeUp}
+				initial="hidden"
+				whileInView="visible"
+				viewport={fadeUpViewport}
+				transition={{ duration: 0.8, ease: 'easeOut' }}
+			>
 				不動産業界大手のWebアプリでJavaScript実務5年（現在も継続中）<br />
 				前職ではWebデザイナーとして3年携わり、デザイン意図を汲んだ丁寧な実装を得意としています
-			</p>
-			<ul className={styles.list}>
+			</motion.p>
+			<motion.ul
+				className={styles.list}
+				variants={fadeUp}
+				initial="hidden"
+				whileInView="visible"
+				viewport={fadeUpViewport}
+				transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+			>
 				<li className={styles.item}>
 					<a href="https://github.com/apricotn18" className={styles.link} aria-label="GitHub" target="_blank" rel="noopener noreferrer">
 						<svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
@@ -36,7 +54,7 @@ export default function Profile() {
 						<span>Contact</span>
 					</a>
 				</li>
-			</ul>
+			</motion.ul>
 			<div className={styles.line}></div>
 		</section>
 	);

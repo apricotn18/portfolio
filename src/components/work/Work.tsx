@@ -1,14 +1,34 @@
+"use client"
+
+import { motion } from 'motion/react';
 import Image from 'next/image';
 import { WORKS } from "./data";
+import { fadeUp, fadeUpViewport } from '@/lib/motion';
 import styles from './styles.module.scss';
 
 export default function Work() {
 	return (
 		<section id="work" className={styles.work}>
-			<h2>WORK</h2>
+			<motion.h2
+				variants={fadeUp}
+				initial="hidden"
+				whileInView="visible"
+				viewport={fadeUpViewport}
+				transition={{ duration: 0.8, ease: 'easeOut' }}
+			>
+				WORK
+			</motion.h2>
 			<ul className={styles.list}>
 				{WORKS.map((work, index: number) => (
-					<li key={index} className={styles.item}>
+					<motion.li
+						key={index}
+						className={styles.item}
+						variants={fadeUp}
+						initial="hidden"
+						whileInView="visible"
+						viewport={fadeUpViewport}
+						transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.1 }}
+					>
 						<a
 							className="noHover"
 							href={work.githubUrl}
@@ -53,7 +73,7 @@ export default function Work() {
 								</span>
 							))}
 						</div>
-					</li>
+					</motion.li>
 				))}
 			</ul>
 		</section>

@@ -1,9 +1,11 @@
 "use client"
 
 import { useEffect, useState } from "react";
+import { motion } from 'motion/react';
 import { ChatWindow } from './ChatWindow';
 import { ChatForm } from './ChatForm';
 import type { Message } from './types';
+import { fadeUp, fadeUpViewport } from '@/lib/motion';
 import styles from './styles.module.scss';
 
 const initMessage: Message = {
@@ -55,8 +57,24 @@ export default function AskAI() {
 	return (
 		<section id="ask-ai" className={styles.askAi}>
 			<div className={styles.wrapper}>
-				<h2 className={styles.title}>Ask AI</h2>
-				<div className={styles.inner}>
+				<motion.h2
+					className={styles.title}
+					variants={fadeUp}
+					initial="hidden"
+					whileInView="visible"
+					viewport={fadeUpViewport}
+					transition={{ duration: 0.8, ease: 'easeOut' }}
+				>
+					Ask AI
+				</motion.h2>
+				<motion.div
+					className={styles.inner}
+					variants={fadeUp}
+					initial="hidden"
+					whileInView="visible"
+					viewport={fadeUpViewport}
+					transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+				>
 					<div className={styles.orange}></div>
 					<ChatWindow
 						messages={messages}
@@ -68,7 +86,7 @@ export default function AskAI() {
 						onChange={setInput}
 						onSubmit={handleSubmit}
 					/>
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	);

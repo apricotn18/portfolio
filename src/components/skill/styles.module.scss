@@ -18,7 +18,7 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 60px;
-	max-width: 880px;
+	max-width: 980px;
 	margin: auto;
 	padding: 0 60px;
 }
@@ -78,7 +78,4 @@
 	55%  { transform: translateX(-12px); bottom: 55%;}
 	75%  { transform: translateX(9px);   bottom: 75%;}
 	100% { transform: translateX(-6px);  bottom: 100%;}
-}
-
-@media screen and (max-width: 600px) {
 }
