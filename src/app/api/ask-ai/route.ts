@@ -1,8 +1,12 @@
 import { GoogleGenAI } from "@google/genai";
 import { NextRequest, NextResponse } from "next/server";
+import { isRateLimited } from "@/lib/rateLimit";
 
 const ai = new GoogleGenAI({ apiKey: process.env.GENAI_TOKEN });
 const SYSTEM_PROMPT = process.env.SYSTEM_PROMPT;
+
+const RATE_LIMIT = 10;
+const RATE_LIMIT_WINDOW_MS = 60 * 1000;
 
 type GeminiErrorBody = {
 	error?: { code?: number; status?: string };
@@ -30,6 +34,11 @@ function toUserMessage(e: unknown): { message: string; status: number } {
 
 export async function POST(req: NextRequest) {
 	try {
+		const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown';
+		if (isRateLimited(ip, RATE_LIMIT, RATE_LIMIT_WINDOW_MS)) {
+			return NextResponse.json({ error: 'リクエストが多すぎます。しばらくしてからお試しください' }, { status: 429 });
+		}
+
 		const { message } = await req.json() as { message: string };
 
 		if (process.env.GENAI_MOCK === 'true') {
