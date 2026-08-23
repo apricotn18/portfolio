@@ -1,8 +1,8 @@
 "use client"
 
 import { motion } from 'motion/react';
+import { Chart } from "./Chart";
 import { Bubble } from "./Bubble";
-import { SkillItem } from "./SkillItem";
 import { SKILLS } from "./data";
 import { fadeUp, fadeUpViewport } from '@/lib/motion';
 import styles from './styles.module.scss';
@@ -23,7 +23,25 @@ export default function Skill() {
 			</motion.h2>
 			<div className={styles.inner}>
 				{SKILLS.map((skill, index: number) => (
-					<SkillItem key={index} skill={skill} delay={index * 0.1} />
+					<motion.div
+						key={index}
+						className={styles.item}
+						variants={fadeUp}
+						initial="hidden"
+						whileInView="visible"
+						viewport={fadeUpViewport}
+						transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.1 }}
+					>
+						<div className={styles.chart}>
+							<Chart number={skill.level} />
+							<p>{skill.level}</p>
+						</div>
+						<div className={styles.text}>
+							<h3 className={styles.name}>{skill.name}</h3>
+							<p className={styles.description}>{skill.description}</p>
+							{skill.note && <p className={styles.note}>{skill.note}</p>}
+						</div>
+					</motion.div>
 				))}
 			</div>
 		</section>
