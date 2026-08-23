@@ -17,19 +17,28 @@ ChartJS.register(
 
 const options = {
 	events: [],
+	responsive: false,
+	animation: {
+		duration: 1000,
+	},
 }
 
 export const Chart = ({ number }: { number: number }) => {
-	return <Doughnut data={{
-		datasets: [
-			{
-				data: [number, 5 - number],
-				backgroundColor: [
-					'#ffcd43',
-					'rgba(255, 205, 67, 0.3)',
-				],
-				borderWidth: 0,
-			}
-		],
-	}} options={options} />
+	return <Doughnut
+		width={130}
+		height={130}
+		data={{
+			datasets: [
+				{
+					data: [number, 5 - number],
+					backgroundColor: [
+						'#ffcd43',
+						'rgba(255, 205, 67, 0.3)',
+					],
+					borderWidth: 0,
+				}
+			],
+		}}
+		options={options}
+	/>
 };
