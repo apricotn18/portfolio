@@ -23,7 +23,7 @@ export default function Skill() {
 			</motion.h2>
 			<div className={styles.inner}>
 				{SKILLS.map((skill, index: number) => (
-					<SkillItem key={index} skill={skill} delay={index * 0.1} />
+					<SkillItem key={index} skill={skill} delay={index * 0.2} />
 				))}
 			</div>
 		</section>

@@ -27,7 +27,7 @@ export default function Work() {
 						initial="hidden"
 						whileInView="visible"
 						viewport={fadeUpViewport}
-						transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.1 }}
+						transition={{ duration: 0.8, ease: 'easeOut', delay: index * 0.2 }}
 					>
 						<a
 							className="noHover"
