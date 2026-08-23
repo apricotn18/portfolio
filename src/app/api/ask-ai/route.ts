@@ -7,6 +7,7 @@ const SYSTEM_PROMPT = process.env.SYSTEM_PROMPT;
 
 const RATE_LIMIT = 10;
 const RATE_LIMIT_WINDOW_MS = 60 * 1000;
+const MAX_MESSAGE_LENGTH = 1000;
 
 type GeminiErrorBody = {
 	error?: { code?: number; status?: string };
@@ -39,7 +40,14 @@ export async function POST(req: NextRequest) {
 			return NextResponse.json({ error: 'リクエストが多すぎます。しばらくしてからお試しください' }, { status: 429 });
 		}
 
-		const { message } = await req.json() as { message: string };
+		const { message } = await req.json() as { message: unknown };
+
+		if (typeof message !== 'string' || !message.trim()) {
+			return NextResponse.json({ error: 'メッセージを入力してください' }, { status: 400 });
+		}
+		if (message.length > MAX_MESSAGE_LENGTH) {
+			return NextResponse.json({ error: `メッセージは${MAX_MESSAGE_LENGTH}文字以内で入力してください` }, { status: 400 });
+		}
 
 		if (process.env.GENAI_MOCK === 'true') {
 			return NextResponse.json({ reply: `（モック）「${message}」へのAI返答です。` });
