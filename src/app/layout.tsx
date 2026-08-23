@@ -20,7 +20,7 @@ const notoSans = Noto_Sans_JP({
 
 export const metadata: Metadata = {
 	title: 'K.KASAHARA Portfolio',
-	description: 'Portfolio website',
+	description: 'フロントエンドエンジニア K.KASAHARAのポートフォリオ',
 };
 
 export default function RootLayout({

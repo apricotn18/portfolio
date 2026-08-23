@@ -19,7 +19,7 @@ export default function Header() {
 			transition={{ duration: 0.3 }}
 		>
 			<a href="#">
-				<h1 className={styles.name}>K.KASAHARA</h1>
+				<span className={styles.name}>K.KASAHARA</span>
 			</a>
 			<div className={styles.buttonWrapper}>
 				<a href="#work">WORK</a>
