@@ -117,7 +117,7 @@
 
 .input {
 	width: 100%;
-	padding: 25px 80px 22px 30px;
+	padding: 25px 80px 23px 30px;
 	color: inherit;
 	border: none;
 	outline: none;
@@ -126,7 +126,7 @@
 	transition: border-color 0.2s;
 
 	&:disabled {
-		background-color: #e5e1db;
+		background-color: #dddad7;
 	}
 
 	&::placeholder {

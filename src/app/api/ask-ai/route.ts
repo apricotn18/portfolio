@@ -1,34 +1,28 @@
-import { GoogleGenAI } from "@google/genai";
+import OpenAI, { APIError } from "openai";
 import { NextRequest, NextResponse } from "next/server";
 import { isRateLimited } from "@/lib/rateLimit";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GENAI_TOKEN });
+const client = new OpenAI({ apiKey: process.env.GROQ_TOKEN, baseURL: 'https://api.groq.com/openai/v1' });
 const SYSTEM_PROMPT = process.env.SYSTEM_PROMPT;
 
 const RATE_LIMIT = 10;
 const RATE_LIMIT_WINDOW_MS = 60 * 1000;
 const MAX_MESSAGE_LENGTH = 1000;
 
-type GeminiErrorBody = {
-	error?: { code?: number; status?: string };
-};
-
 function toUserMessage(e: unknown): { message: string; status: number } {
-	const body = (e instanceof Error ? JSON.parse(e.message.match(/\{[\s\S]*/)?.[0] ?? '{}') : {}) as GeminiErrorBody;
-	const code = body?.error?.code;
-	const geminiStatus = body?.error?.status;
-
-	if (code === 429 || geminiStatus === 'RESOURCE_EXHAUSTED') {
-		return { message: 'APIの利用制限に達しました。しばらくしてからお試しください', status: 429 };
-	}
-	if (code === 503 || geminiStatus === 'UNAVAILABLE') {
-		return { message: 'AIが混み合っています。しばらくしてからお試しください', status: 503 };
-	}
-	if (code === 401 || code === 403) {
-		return { message: 'APIキーが無効です', status: 403 };
-	}
-	if (code === 404) {
-		return { message: 'AIモデルが見つかりません', status: 404 };
+	if (e instanceof APIError) {
+		if (e.status === 429) {
+			return { message: 'APIの利用制限に達しました。しばらくしてからお試しください', status: 429 };
+		}
+		if (e.status === 503) {
+			return { message: 'AIが混み合っています。しばらくしてからお試しください', status: 503 };
+		}
+		if (e.status === 401 || e.status === 403) {
+			return { message: 'APIキーが無効です', status: 403 };
+		}
+		if (e.status === 404) {
+			return { message: 'AIモデルが見つかりません', status: 404 };
+		}
 	}
 	return { message: 'エラーが発生しました。もう一度お試しください', status: 500 };
 }
@@ -53,13 +47,16 @@ export async function POST(req: NextRequest) {
 			return NextResponse.json({ reply: `（モック）「${message}」へのAI返答です。` });
 		}
 
-		const response = await ai.models.generateContent({
-			model: "gemini-2.5-flash-lite",
-			contents: message,
-			config: { systemInstruction: SYSTEM_PROMPT },
+		const response = await client.chat.completions.create({
+			model: "openai/gpt-oss-120b",
+			messages: [
+				...(SYSTEM_PROMPT ? [{ role: 'system' as const, content: SYSTEM_PROMPT }] : []),
+				{ role: 'user' as const, content: message },
+			],
 		});
-		return NextResponse.json({ reply: response.text });
+		return NextResponse.json({ reply: response.choices[0]?.message.content ?? '' });
 	} catch (e) {
+		console.error(e);
 		const { message, status } = toUserMessage(e);
 		return NextResponse.json({ error: message }, { status });
 	}
