@@ -18,7 +18,7 @@ export const WORKS = [
 	},
 	{
 		name: 'ai-chat',
-		description: 'Gemini APIを使った星共占いテーマの対話型チャットアプリ。会話の流れを重視したUI設計で、最新のNext.js・Reactを採用しています',
+		description: 'Gemini APIを使った星座占いテーマの対話型チャットアプリ。会話の流れを重視したUI設計で、最新のNext.js・Reactを採用しています',
 		image: aichat,
 		githubUrl: 'https://github.com/apricotn18/ai-chat',
 		skill: [

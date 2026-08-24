@@ -44,7 +44,7 @@ export default function Profile() {
 					</a>
 				</li> */}
 				<li className={styles.item}>
-					<a href="https://forms.gle/Joo4eLQZVdkkX7yK9" className={styles.link} aria-label="Contact" target="_blank" rel="noopener noreferrer">
+					<a href="https://forms.gle/aKCk16d2uraGF8Ei9" className={styles.link} aria-label="Contact" target="_blank" rel="noopener noreferrer">
 						<svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true">
 							<circle cx="12" cy="12" r="12" fill="currentColor" />
 							<g transform="translate(3.55,3.55) scale(0.033)">
